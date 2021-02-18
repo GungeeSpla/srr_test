@@ -53,7 +53,8 @@ var DEFAULT_SAVEDATA = {
 	'display-item-links': true,
 	'display-item-members': true,
 	'display-item-rotation': true,
-	'display-item-ties': true,
+	'display-item-ties': false,
+	'display-update-log': true,
 	'radio-stage-0': false,
 	'radio-stage-1': false,
 	'radio-stage-2': false,
@@ -65,9 +66,8 @@ var DEFAULT_SAVEDATA = {
 	'rotation-green-mystery-one': false,
 	'rotation-normal': true,
 	'change-roman': false,
-	'omit-ties': false,
-	'display-update-log': true,
-	'fix-thead': true	
+	'omit-ties': true,
+	'fix-thead': false	
 };
 
 
