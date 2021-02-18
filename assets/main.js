@@ -158,7 +158,6 @@ window.addEventListener('DOMContentLoaded', function() {
 		document.body.classList.add('mousedevice');
 	}
 
-	/*
 	if (isTouchDevice) {
 		var timer;
 		var beforeTableTop = -1;
@@ -200,7 +199,6 @@ window.addEventListener('DOMContentLoaded', function() {
 		$recordTableArea.addEventListener('scroll', tableScrollHandler);
 		window.addEventListener('scroll', scrollHandler);
 	}
-	*/
 
 	$modalUpdateLogFooter.addEventListener(clickEvent, function() {
 		$modalUpdateLog.classList.add('hidden');
