@@ -151,7 +151,8 @@ window.addEventListener('DOMContentLoaded', function() {
 	if ('ontouchstart' in window) {
 		isTouchDevice = true;
 		clickEvent = 'click';
-		document.body.classList.add('touchdevice');
+		//document.body.classList.add('touchdevice');
+		document.body.classList.add('mousedevice');
 	} else {
 		isTouchDevice = false;
 		clickEvent = 'click';
