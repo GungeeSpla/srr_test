@@ -159,6 +159,17 @@ window.addEventListener('DOMContentLoaded', function() {
 	}
 
 	if (isTouchDevice) {
+		$recordTableArea.addEventListener('scroll', function() {
+			if (saveDataObj['fix-thead'] && saveDataObj['radio-stage-all']) {
+				var rect = $recordTableArea.getBoundingClientRect();
+				if (rect.top !== 0) {
+					scrollTarget.scrollTop += rect.top;
+				}
+			}
+		});
+	}
+	/*
+	if (isTouchDevice) {
 		var timer;
 		var beforeTableTop = -1;
 		var tableScrollHandler = function() {
@@ -167,6 +178,7 @@ window.addEventListener('DOMContentLoaded', function() {
 				beforeTableTop = $recordTableArea.scrollTop;
 				var rect = $recordTableArea.getBoundingClientRect();
 				if (rect.top !== 0) {
+					$recordTableArea.scrollTop -= move;
 					timer = setTimeout(function() {
 						scrollTarget.scrollTop += move;
 						scrollHandler();
@@ -199,6 +211,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		$recordTableArea.addEventListener('scroll', tableScrollHandler);
 		window.addEventListener('scroll', scrollHandler);
 	}
+	*/
 
 	$modalUpdateLogFooter.addEventListener(clickEvent, function() {
 		$modalUpdateLog.classList.add('hidden');
